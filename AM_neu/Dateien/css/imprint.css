@@ -1,0 +1,67 @@
+#content_left
+{
+height : 1700px;
+width : 20%;
+float : left;
+background-color : none;
+opacity : 0.7;
+}
+
+#content_right
+{
+height : 1px;
+width : 20%;
+float : left;
+background-color : none;
+opacity : 0.7;
+}
+
+#content_middle
+{
+height : 2400px;
+width : 60%;
+float : left;
+background-color: rgba(255,255,255,0.7);
+}
+
+#content
+{
+width : 100%;
+height : 534px;
+float : left;
+top : 28%;
+left : 0px;
+right : 0px;
+position : absolute;
+background-color : none;
+}
+
+h2
+{
+margin-left : 20px;
+margin-right : 20px;
+text-align : justify;
+}
+
+h1
+{
+text-align : center;
+}
+
+p, td, tr
+{
+margin-left : 30px;
+margin-right : 20px;
+text-align : justify;
+}
+
+
+span
+{
+font-size : 1.3em;
+}
+
+input
+{
+display : none;
+}

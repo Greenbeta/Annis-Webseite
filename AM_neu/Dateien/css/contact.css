@@ -1,0 +1,98 @@
+input
+{
+transition : background-color 0.5s;
+position : absolute;
+margin-left : 300px;
+}
+
+input:hover
+{
+background-color : #D6D6D6;
+}
+
+h2
+{
+text-align : center;	
+}
+
+#infoline
+{
+margin-left : 176px;
+}
+
+button
+{
+margin-left : 176px;
+margin-top : 20px;
+}
+
+.textbox 
+{ 
+height: 25px; 
+width: 600px; 
+background-color: transparent;  
+border-style: solid;  
+border-width: 0px 0px 1px 0px;  
+border-color: darkred; 
+margin-left : 175px;
+outline:0; 
+} 
+#content_left
+{
+height : 800px;
+width : 20%;
+float : left;
+background-color : none;
+opacity : 0.7;
+}
+
+#content_right
+{
+height : 800px;
+width : 20%;
+float : left;
+background-color : none;
+opacity : 0.7;
+}
+
+#content_middle
+{
+height : 950px;
+width : 60%;
+float : left;
+background-color: rgba(255,255,255,0.7);
+}
+
+#content
+{
+width : 100%;
+height : 534px;
+float : left;
+top : 28%;
+left : 0px;
+right : 0px;
+position : absolute;
+background-color : none;
+}
+
+
+.sender
+{
+margin-top : 30px;
+left : 178px;
+}
+
+h1
+{
+text-align : center;
+}
+span
+{
+font-size : 1.3em;
+}
+
+#facebook_button
+{
+margin-left : 40px;
+}
+

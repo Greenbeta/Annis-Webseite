@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Dateien/css/style.css">
+		<link rel="stylesheet" type="text/css" href="Dateien/css/safari.css">
+		<link rel="stylesheet" type="text/css" href="Dateien/css/animation.css">
+		
+		<link rel="shortcut icon" type="image/x-icon" href="Dateien/bilder/favicon/favicon.ico">
+		
+		
+		<title>AM Photography</title>
+		
+	<script>
+		(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+		self.previous.style.display = "block";
+		self.next.style.display = "block";
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			
+			this.actions();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		actions: function() {
+			var self = this;
+			self.next.addEventListener( "click", function() {
+				self.index++;
+				self.previous.style.display = "block";
+				
+				if( self.index == self.total - 1 ) {
+					self.index = self.total - 1;
+					//self.next.style.display = "none";
+					self.index = 0;
+				}
+				
+				self._slideTo( self.index );
+				
+			}, false);
+			
+			self.previous.addEventListener( "click", function() {
+				self.index--;
+				self.next.style.display = "block";
+				
+				if( self.index == -1 ) {
+					self.index = 0;
+					//self.previous.style.display = "none";
+					self.index = 3;
+				}
+				
+				self._slideTo( self.index );
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+</script>
+
+		<script language="javascript" type="text/javascript">
+			function loadsize(){
+				window.ResizeTo(screen.width,screen.height);
+			}
+		</script>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/rafaelp/css_browser_selector/master/css_browser_selector.js"></script>
+	
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+	</style>
+	
+	<link rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 1)" href="Dateien/css/safari.css">
+	
+	<meta charset="UTF-8">
+	<meta name = "viewport" content ="initial-scale = 1.0">
+	
+	<!-- Latest compiled and minified CSS 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	-->
+	
+</head>
+	
+	<!--<body background="Dateien/bilder/slideshow/KraftKlub.jpg">-->
+	<body bgcolor="#7AD3D7" onload="loadsize();">
+	
+		<div id="navigation">
+			<div id="space_nav"></div>
+			
+			<a href="index.html"><div id="home"><br><span>Home</span><br>​‌</a></div>
+			
+			<a href="Dateien/concerts/concerts.html"><div id="concerts"><br><span>Concerts</span><br>​‌</a></div>
+			
+			<a href="Dateien/bands/bands.html"><div id="bands"><br><span>Bands</span><br>​‌</a></div>
+			
+			<div id="logo"><img src="Dateien/bilder/logo/logo_neu.png" height="160%" width="160%"></div>
+			
+			<a href="Dateien/image/image.html"><div id="product"><br><span>Image</span><br>​‌</a></div>
+			
+			<a href="Dateien/contact/contact.html"><div id="contact"><br><span>Contact</span><br>​‌</a></div>
+			
+			<a href="Dateien/imprint/imprint.html"><div id="imprint"><br><span>About</span><br>​‌</a></div>
+			
+		</div>
+		<div id="content">
+			<div id="content_left">
+			</div>
+		
+				<div id="content_middle">
+					<div class="slider" id="main-slider"><!-- outermost container element -->
+						<div class="slider-nav"><!-- "Previous" and "Next" actions -->
+						<br>
+							<button class="slider-previous"></button>
+							<button class="slider-next"></button>
+						</div>
+							<br><br>
+						<div class="slider-wrapper"><!-- innermost wrapper element -->
+							<img src="Dateien/bilder/slideshow/Kraftklub.jpg" alt="" class="slide" height="534px" width="950px"><!-- slides -->
+							<img src="Dateien/bilder/slideshow/DSC_0069.jpg" alt="" class="slide" height="534px" width="950px">
+							<img src="Dateien/bilder/slideshow/annisokay.jpg" alt="" class="slide" height="534px" width="950px">
+							<img src="Dateien/bilder/slideshow/antiheld.jpg" alt="" class="slide" height="534px" width="950px">
+							<img src="Dateien/bilder/slideshow/antiheld.jpg" alt="" class="slide" height="534px" width="950px">
+						</div>
+					</div>
+				</div>
+			<div id="content_right">
+			
+			</div>
+			<input>
+		</div>
+	</body>
+	
+</html>

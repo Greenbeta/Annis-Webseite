@@ -1,0 +1,30 @@
+/*@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  #content_middle { background-color : red; } 
+} */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+    ::i-block-chrome, .slider{
+        margin-left : 120px;
+		margin-top : 70px;
+	}
+	
+	::i-block-chrome, body{
+		background : -webkit-gradient(to top, #447072, #7AD3D7);
+	}
+	 
+	::i-block-chrome, #navigation a{
+		padding-top : 60px;
+		font-family: 'Text Me One', sans-serif;
+		font-size : 1.2em;
+		transform: rotate(360deg)scale(1.2,1.2);
+	}
+	 
+	::i-block-chrome, #search_inner input{
+		left : 900px;
+	}
+
+	::i-block-chrome, #search_inner img{
+		left : 860px;
+	}		
+	
+}
